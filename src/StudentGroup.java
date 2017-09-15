@@ -1,5 +1,4 @@
 import java.util.Date;
-import java.lang.*;
 
 /**
  * A fix-sized array of students
@@ -33,7 +32,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
-		/*try{
+		try{
 			if(students==null)
 			{
 				throw new IllegalArgumentException("Empty argument of Student Array.");
@@ -53,8 +52,7 @@ public class StudentGroup implements StudentArrayOperation {
 		catch(IllegalArgumentException e)
 		{
 			System.out.println(e);
-		}*/
-		this.students = students;
+		}
 	}
 
 	@Override

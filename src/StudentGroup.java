@@ -37,10 +37,7 @@ public class StudentGroup implements StudentArrayOperation {
 			{
 				throw new IllegalArgumentException("Empty argument of Student Array.");
 			}
-			else
-			{
-				this.students = students;
-			}
+			this.students = students;
 		}
 		catch(IllegalArgumentException e)
 		{
@@ -51,6 +48,18 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
+		try{
+			int l = students.length;
+			if(index < 0 || index >= l)
+			{
+				throw new IllegalArgumentException("Illegal Indexto access Student Array.");
+			}
+			return students[index];
+		}
+		catch(IllegalArgumentException e)
+		{
+			System.out.println(e);
+		}
 		return null;
 	}
 
